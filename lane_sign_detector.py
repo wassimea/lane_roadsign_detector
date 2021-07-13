@@ -13,6 +13,8 @@ def region(img,vertices):
 	#cv2.waitKey()
 
 	masked_image=cv2.bitwise_and(img,mask)
+	#cv2.imshow("masked_image", masked_image)
+	#cv2.waitKey()
 	return masked_image
 
 def draw_the_lines(img,lines):
@@ -129,6 +131,12 @@ def process_images(folder_path):
 
         mid = (width/2, height/3 + 70)
         bottom_right = (width- 350,height - 400)
+
+        #cv2.circle(frame, (200,height - 400), radius=1, color=(0, 0, 255), thickness=5)
+        #cv2.circle(frame, (int(width/2), int(height/3) + 70), radius=1, color=(0, 0, 255), thickness=5)
+        #cv2.circle(frame, (width- 350,height - 400), radius=1, color=(0, 0, 255), thickness=5)
+        #cv2.imshow("frame", frame)
+        #cv2.waitKey()
 
         region_of_interest_coor = [ low_left,mid,bottom_right]
 
